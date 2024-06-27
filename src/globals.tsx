@@ -1,4 +1,5 @@
 import CopyArea from './components/CopyArea';
+import DateDemo from './components/DateDemo';
 import { NavBar } from './components/Navbar';
 import TextArea from './components/TextArea';
 
@@ -107,5 +108,27 @@ const NavBar = () => {
 };
 
 export default Navbar;`,
+  },
+  {
+    name: 'Date formater',
+    link: 'date-formater',
+    description: `Function to format a Date`,
+    needed: ['date-fns'],
+    element: <DateDemo />,
+    text: `enum DateString {
+  full = 'eeee dd MMMM yyyy HH:mm',
+  short = 'dd/MM/yyyy',
+  day = 'eeee',
+  date = 'dd MMMM yyyy',
+  lDate = 'dd MMMM',
+  monthNyear = 'MMMM yyyy',
+  month = 'MMMM',
+  year = 'yyyy',
+  time = 'HH:mm',
+}
+
+const getDateAsString = (date: Date, type: DateString = DateString.full) => {
+  return format(date, type, { locale: fr });
+};`,
   },
 ];

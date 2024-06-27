@@ -19,7 +19,7 @@ const Component = () => {
       {!!component.needed.length && (
         <div className="flex flex-col gap-3">
           <p className="text-xl">Packages needed</p>
-          <TextArea text={component.needed.join('\n')} />
+          <CopyArea text={component.needed.map((need) => 'npm i ' + need).join('\n')} />
         </div>
       )}
       <CopyArea text={component.text} />
