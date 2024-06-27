@@ -20,7 +20,7 @@ const CopyArea: React.FC<TCopyAreaParams> = ({ text }) => {
   };
 
   return (
-    <div className="relative rounded-xl border bg-gray-800 px-4 py-4">
+    <div className="relative rounded-xl border bg-primary-foreground px-4 py-4">
       <pre className="break-words whitespace-pre-wrap">{text}</pre>
       <div className="absolute top-0 right-0 p-4">
         <Clipboard

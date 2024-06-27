@@ -31,7 +31,7 @@ const CopyArea: React.FC<TCopyAreaParams> = ({ text }) => {
   };
 
   return (
-    <div className="relative rounded-xl border bg-gray-800 px-4 py-4">
+    <div className="relative rounded-xl border bg-primary-foreground px-4 py-4">
       <pre className="break-words whitespace-pre-wrap">{text}</pre>
       <div className="absolute top-0 right-0 p-4">
         <Clipboard
@@ -59,7 +59,7 @@ export default CopyArea;`,
 
 const TextArea: React.FC<TCopyAreaParams> = ({ text }) => {
   return (
-    <div className="rounded-xl border bg-gray-800 px-4 py-4">
+    <div className="rounded-xl border bg-primary-foreground px-4 py-4">
       <pre className="break-words whitespace-pre-wrap">{text}</pre>
     </div>
   );
@@ -71,13 +71,11 @@ export default TextArea;`,
     name: 'Navbar',
     link: 'navbar',
     description: `A navbar that take a routes tab like:
-routes = [
-  {
-    name: string,
-    path: string,
-    element: JSX.Element,
-  },
-];`,
+{
+  name: string,
+  path: string,
+  element: JSX.Element,
+}[]`,
     needed: ['react-router-dom'],
     element: <NavBar />,
     text: `import { routes } from '...';
